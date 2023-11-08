@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- import json
+    import boto3
+
+    def lambda_handler(event, context):
+        # TODO implement
+        
+        for i in event['Records']:
+            action=i['eventName']
+            object=i['s3']['object']['key']
+            
+        client=boto3.client('ses')
+        
+        subject="A file has been uploaded to your S3 Bucket"
+        body="The file with name {} has beed uploaded to S3 bucket".format(object)
+        
+        message={"Subject": {"Data": subject}, "Body":{"Text": {"Data":body}}}
+        
+        response=client.send_email(Source="ksamueljoseph006@gmail.com",Destination={"ToAddresses":["ksamueljoseph006@gmail.com"]}, Message=message)
+        
+        return {
+            'statusCode': 200,
+            'body': json.dumps('Hello from Lambda!')
+        } -->
+
+    
+    <!-- import boto3
+
+    region = 'us-east-1'
+    instance_id = 'i-01e10c376d9f7e514'
+    ec2 = boto3.client('ec2', region_name=region)
+
+    def lambda_handler(event, context):
+        response = ec2.describe_instances(InstanceIds=[instance_id])
+        
+        instance_state = response['Reservations'][0]['Instances'][0]['State']['Name']
+        
+        if instance_state == 'running':
+            ec2.stop_instances(InstanceIds=[instance_id])
+            print('Stopping your instance: ' + instance_id)
+        elif instance_state == 'stopped':
+            ec2.start_instances(InstanceIds=[instance_id])
+            print('Starting your instance: ' + instance_id)
+        else:
+            print('Instance is in an unknown state: ' + instance_state) -->
+    
+    <!-- sudo apt update
+    sudo apt install mysql-server –y
+    sudo systemctl status mysql
+    sudo mysql
+    alter user 'root'@'localhost' identified with mysql_native_password by
+    'admin123';
+    flush privileges;
+    create database mbu;
+    show databases;
+    use mbu;
+    show tables;
+    create table table1 (id int, name varchar(45));
+    show tables;
+    insert into student values(1, 'nikhil'), (2, 'teja'), (3, 'jeevan'), (4, 'ram');
+    select * from student; -->
+
+    <!-- #!/bin/bash
+    dnf install -y httpd
+    systemctl enable httpd
+    systemctl start httpd
+    cd /var/www/html/
+    echo "South Server-1" > index.html (or) echo "North Server-1" > index.html -->
+
+    <!-- #!/bin/bash
+    yum install httpd -y
+    service httpd start
+    chkconfig httpd on
+    mkdir /var/www/html/south
+    echo "<html><h1>This is south server</h1><html>">/var/www/html/south/index.html  -->
+</body>
+</html>
